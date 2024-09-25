@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+    <body>
+        <h3>1. Apa warna kesukaan eluh</h3>
+        <form action="index.php" method="post">
+
+            <input type="radio" name="title" id="freya1">pink</input>
+            <input type="radio" name="title" id="lulu1">hijau</input>
+            <input type="radio" name="title" id="zee1">hitam</input>
+
+        <h3>2. Apa makanan kesukaan eluh</h3>
+
+        <input type="radio" name="titie" id="freya2">pizza</input>
+        <input type="radio" name="titie" id="lulu2">roti</input>
+        <input type="radio" name="titie" id="zee2">steak sapi</input>
+
+        <h3>3. Terakhir, temen lu ngeoshiin siapa?</h3>
+
+            <input type="radio" name="titlo" id="freya3">flora</input>
+            <input type="radio" name="titlo" id="lulu3">oniel</input>
+            <input type="radio" name="titlo" id="zee3">freya</input> <br><br>
+
+            <input type="submit" onclick="result()">
+
+            <script>
+                function result(){
+                    var score=0;
+                    if (document.getElementById('freya1').checked){
+                        score++
+                    }
+
+                    if (document.getElementById('freya2').checked){
+                        score++
+                    }
+
+                    if (document.getElementById('freya3').checked){
+                        score++
+                    }
+
+                    if (document.getElementById('lulu1').checked){
+                        score--
+                    }
+
+                    if (document.getElementById('lulu2').checked){
+                        score--
+                    }
+
+                    if (document.getElementById('lulu3').checked){
+                        score--
+                    }
+
+                    if (score == 0){
+                        alert("YOUR OSHI IS ZEE");
+                    }
+
+                    else if (score >= 1){
+                        alert("YOUR OSHI IS FREYA");
+                    }
+
+                    else{
+                        alert("YOUR OSHI IS LULU");
+                    }
+                }
+            </script>
+
+        </form>
+    </body>
+</html>
